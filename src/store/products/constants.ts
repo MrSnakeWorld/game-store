@@ -1,0 +1,3 @@
+export const SELECT_GAME = 'SELECT_GAME';
+export const SELECT_CATEGORY = 'SELECT_CATEGORY';
+export const SELECT_GENRE = 'SELECT_GENRE';

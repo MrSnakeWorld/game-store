@@ -1,0 +1,48 @@
+.header {
+	position: sticky;
+	top: 0px;
+	height: 60px;
+	z-index: 0;
+	/* width: 100%; */
+	background-color: cornflowerblue;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__user-avatar {
+	padding-left: 18px;
+}
+
+.header__user-avatar > .avatar:hover {
+	cursor: pointer;
+}
+
+.header__user-login {
+	margin: 18px;
+}
+
+.header__input {
+	padding: 0 10px;
+	width: 50%;
+}
+
+.header__cart {
+	padding-right: 18px;
+}
+.header__cart > .clickable:hover {
+	cursor: pointer;
+}
+
+.header__cart-icon {
+	width: 40px;
+	height: 40px;
+}
+
+@media (max-width: 800px) {
+	.header__input {
+		margin: 0px 30px;
+		width: 100%;
+	}
+}

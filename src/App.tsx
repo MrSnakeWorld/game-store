@@ -1,26 +1,41 @@
+import {createBrowserHistory} from 'history';
 import React from 'react';
-import logo from './logo.svg';
+import {Route, Routes} from 'react-router-dom';
 import './App.css';
+import useAuthModal from './components/AuthModal/useAuthModal';
+import Header from './components/Header/Header';
+import GamePage from './pages/GamePage/GamePage';
+import HomePage from './pages/HomePage/HomePage';
+import UserPage from './pages/UserPage/UserPage';
+import {Sticky, StickyContainer} from 'react-sticky';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const history = createBrowserHistory();
+
+const App = () => {
+	const {modal, onOpen, setAuth} = useAuthModal();
+	return (
+		<div className="app">
+			<StickyContainer>
+				<Sticky>
+					{({style}) => (
+						<div style={{...style, zIndex: 100}}>
+							<Header 
+								onOpen={onOpen}
+								setAuth={setAuth}
+							/>
+						</div>
+					)}
+				</Sticky>
+
+				<Routes>     
+					<Route path="/game/:id" element={<GamePage />} />
+					<Route path="/" element={<HomePage />} />   
+					<Route path="/user/:id" element={<UserPage />} />
+				</Routes>
+				{modal}
+			</StickyContainer>
+		</div>
+	);
+};
 
 export default App;

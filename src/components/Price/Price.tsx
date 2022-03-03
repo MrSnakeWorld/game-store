@@ -2,7 +2,7 @@ import React from 'react';
 import {Flex, Heading} from '@chakra-ui/react';
 
 interface IPriceProps {
-	price: number;
+	price?: number;
 	discount?: number;
 	variant: 'full' | 'small';
 }
@@ -11,7 +11,7 @@ const Price = ({price, discount, variant}: IPriceProps) => {
 	const bigSize = variant === 'full' ? 'lg' : 'md';
 	const smallSize = variant === 'full' ? 'md' : 'sm';
 
-	return (
+	return price ? (
 		<Flex>
 			{discount && (
 				<Heading size={bigSize}>{Math.floor(price / 100 * (100 - discount))}</Heading>
@@ -20,7 +20,7 @@ const Price = ({price, discount, variant}: IPriceProps) => {
 				{price}
 			</Heading>
 		</Flex>
-	);
+	) : null;
 };
 
 export default Price;

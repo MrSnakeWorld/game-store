@@ -10,7 +10,7 @@ export interface IGame {
 	description: string;
 	fullDescription: IDescription[];
 	genres: string[];
-	price: number;
+	price?: number;
 	discount?: number;
 	isNovice?: boolean;
 	isLeader?: boolean;

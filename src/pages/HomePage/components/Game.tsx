@@ -1,6 +1,5 @@
-import {AspectRatio, Box, Button, Tag, Text, Image, Flex, Center, Tooltip} from '@chakra-ui/react';
-import classNames from 'classnames';
 import React from 'react';
+import {AspectRatio, Box, Tag, Text, Image, Flex, Center, Tooltip} from '@chakra-ui/react';
 import {useNavigate} from 'react-router-dom';
 import CartButton from '../../../components/CartButton/CartButton';
 import Price from '../../../components/Price/Price';

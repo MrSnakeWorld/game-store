@@ -6,7 +6,6 @@ import Cards from './components/Cards';
 import Filters from './components/Filters';
 import Popular from './components/Popular';
 import './HomePage.css';
-import Header from '../../components/Header/Header';
 
 const HomePage = () => {
 	const games = useAppSelector(extractGamesAsArray);

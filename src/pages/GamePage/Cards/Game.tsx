@@ -1,5 +1,5 @@
-import {AspectRatio, Image, Text, Center, Flex, Tag, Button, Box, Grid, GridItem} from '@chakra-ui/react';
 import React from 'react';
+import {AspectRatio, Image, Text, Flex, Grid, GridItem} from '@chakra-ui/react';
 import CartButton from '../../../components/CartButton/CartButton';
 import Price from '../../../components/Price/Price';
 import {IGame} from '../../../tools/interfaces/IGame';

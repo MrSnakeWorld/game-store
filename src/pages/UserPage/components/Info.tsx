@@ -1,5 +1,5 @@
 import {Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Heading, Input} from '@chakra-ui/react';
-import {Field, FieldProps, Form, Formik, FormikHelpers, FormikProps} from 'formik';
+import {Field, FieldProps, Form, Formik, FormikProps} from 'formik';
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {editUser} from '../../../store/users/actions';
@@ -17,11 +17,7 @@ const Info = ({user}: {user: IUser}) => {
 		values: {
 			name: string;
 			email: string;
-		}, 
-		formikHelpers: FormikHelpers<{
-			name: string;
-			email: string;
-		}>
+		}
 	) => {
 		setChange(false);
 		dispatch(editUser(values.name, values.email));
@@ -44,7 +40,7 @@ const Info = ({user}: {user: IUser}) => {
 					onSubmit={handleApply}
 				>
 					{(props: FormikProps<unknown>) => (
-						<Form className='user__info-content'>
+						<Form className='user__info-content' {...props}>
 							<Field name="name" validate={validateName}>
 								{({field, form}: FieldProps) => (
 									<FormControl isInvalid={!!(form.errors.name && form.touched.name)}>

@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Header.css';
-import {IoCartSharp} from 'react-icons/io5';
 import UserAvatar from './components/UserAvatar';
 import useAppSelector from '../../tools/hooks/useAppSelector';
-import {extractGamesAsArray, extractGameTitlesAsArray} from '../../store/products/selectors';
+import {extractGameTitlesAsArray} from '../../store/products/selectors';
 import Search from './components/Search';
 import Cart from './components/Cart';
 import {extractCurrentUser} from '../../store/users/selectors';
-import {Link, Text} from '@chakra-ui/react';
 import EnterMenu from './components/EnterMenu';
 
 interface IHeaderProps {

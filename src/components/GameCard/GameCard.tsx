@@ -1,6 +1,5 @@
-import {Flex, Box, Image, Heading, Stack, Text, Tag, AspectRatio, Grid, GridItem, Button} from '@chakra-ui/react';
-import classNames from 'classnames';
 import React, {useState} from 'react';
+import {Flex, Box, Image, Heading, Stack, Text, Tag, AspectRatio, Grid, GridItem, Button} from '@chakra-ui/react';
 import {useNavigate} from 'react-router-dom';
 import useSize from '../../tools/hooks/useSize';
 import {IGame} from '../../tools/interfaces/IGame';

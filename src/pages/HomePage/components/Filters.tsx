@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import {Box, Heading, List, ListIcon, ListItem, Stack, Tag, Text, Flex, TagRightIcon, TagCloseButton, Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel} from '@chakra-ui/react';
+import {Box, Heading, List, ListIcon, ListItem, Stack, Tag, Flex, TagCloseButton, Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel} from '@chakra-ui/react';
 import {FaRegCircle, FaCircle} from 'react-icons/fa';
 import {useDispatch} from 'react-redux';
 import {selectCategory, selectGenre} from '../../../store/products/actions';
-import {IGame} from '../../../tools/interfaces/IGame';
-import {IoClose} from 'react-icons/io5';
 import useSize from '../../../tools/hooks/useSize';
 
 const categories = ['Новинки', 'Лидеры продаж', 'Скидки', 'Скоро выйдут'];

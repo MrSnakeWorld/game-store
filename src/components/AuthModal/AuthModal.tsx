@@ -1,4 +1,4 @@
-import {Button, Modal, ModalCloseButton, ModalOverlay} from '@chakra-ui/react';
+import {Modal, ModalOverlay} from '@chakra-ui/react';
 import React from 'react';
 import Login, {ILoginValues} from './components/Login';
 import Registration, {IRegistrationValues} from './components/Registration';

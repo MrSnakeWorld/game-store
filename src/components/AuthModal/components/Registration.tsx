@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Center, FormControl, FormErrorMessage, FormLabel, Heading, IconButton, Input, InputGroup, InputRightElement, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, useBoolean, useControllableState} from '@chakra-ui/react';
+import {Button, Center, FormControl, FormErrorMessage, FormLabel, Heading, IconButton, Input, InputGroup, InputRightElement, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, useBoolean} from '@chakra-ui/react';
 import {Field, FieldProps, Form, Formik, FormikProps} from 'formik';
 import validateName from '../../../tools/validates/validateName';
 import validateEmail from '../../../tools/validates/validateEmail';
@@ -32,7 +32,7 @@ const Registration = ({setAuth, onRegistration}: IRegistrationProps) => {
 					onSubmit={onRegistration}
 				>
 					{(props: FormikProps<unknown>) => (
-						<Form>
+						<Form {...props}>
 							<Field name="email" validate={validateEmail}>
 								{({field, form}: FieldProps) => (
 									<FormControl isInvalid={!!(form.errors.email && form.touched.email)}>

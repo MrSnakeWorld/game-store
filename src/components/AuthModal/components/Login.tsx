@@ -30,7 +30,7 @@ const Login = ({setAuth, onLogin}: ILoginProps) => {
 					onSubmit={onLogin}
 				>
 					{(props: FormikProps<unknown>) => (
-						<Form>
+						<Form {...props}>
 							<Field name="email" validate={validateEmail}>
 								{({field, form}: FieldProps) => (
 									<FormControl isInvalid={!!(form.errors.email && form.touched.email)}>

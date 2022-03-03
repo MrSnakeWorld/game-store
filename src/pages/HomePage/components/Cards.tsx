@@ -1,4 +1,4 @@
-import {Flex, Wrap, WrapItem} from '@chakra-ui/react';
+import {Wrap, WrapItem} from '@chakra-ui/react';
 import React from 'react';
 import Game from './Game';
 import {IGame} from '../../../tools/interfaces/IGame';

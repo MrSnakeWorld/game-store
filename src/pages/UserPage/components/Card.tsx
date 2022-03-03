@@ -1,7 +1,6 @@
 import {AspectRatio, Box, Grid, GridItem, Heading, Image, Stack, Tag, Text, Flex, Button} from '@chakra-ui/react';
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import useSize from '../../../tools/hooks/useSize';
 import {IGame} from '../../../tools/interfaces/IGame';
 
 const Card = ({game}: {game: IGame}) => {

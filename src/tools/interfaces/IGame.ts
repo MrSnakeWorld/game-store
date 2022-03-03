@@ -15,7 +15,7 @@ export interface IGame {
 	isNovice?: boolean;
 	isLeader?: boolean;
 	isCame?: boolean;
-	requirements: IRequirements[];
+	requirements?: IRequirements[];
 	languages: string[];
 	date: string;
 	author: string;

@@ -38,11 +38,17 @@ const GamePage = () => {
 			</Grid>
 
 			<Genres genres={game.genres}/>
-			<Description description={game.fullDescription} />
+			{game.requirements && (
+				<Description description={game.fullDescription} />
+			)}
 			
 			<Grid className="game__footer" gap={10}>
 				<GridItem className="game__footer-requirements">
-					<Requirements game={game} />
+					{game.requirements ? (
+						<Requirements game={game} />
+					) : (
+						<Description description={game.fullDescription} />
+					)}
 				</GridItem>
 				<GridItem className="game__footer-info">
 					<Info game={game} />

@@ -3,7 +3,7 @@ import React from 'react';
 import genId from '../../../tools/genId';
 import {IGame} from '../../../tools/interfaces/IGame';
 
-const Requirements = ({game}: {game: IGame}) => (
+const Requirements = ({game}: {game: IGame}) => game.requirements ? (
 	<Box className="game__requirements game__card">
 		<Heading>Системные требования</Heading>
 		<Divider/>
@@ -21,6 +21,6 @@ const Requirements = ({game}: {game: IGame}) => (
 			))}
 		</Grid>
 	</Box>
-);
+) : null;
 
 export default Requirements;

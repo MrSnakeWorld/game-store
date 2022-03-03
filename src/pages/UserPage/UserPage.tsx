@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {Avatar, Box, Center, Grid, GridItem, Heading} from '@chakra-ui/react';
 import {ImArrowLeft2} from 'react-icons/im';
 import {useNavigate, useParams} from 'react-router-dom';
-import {extractUserById} from '../../store/users/selectors';
+import {extractCurrentUser, extractUserById} from '../../store/users/selectors';
 import useAppSelector from '../../tools/hooks/useAppSelector';
 import Info from './components/Info';
 import './UserPage.css';
@@ -11,13 +11,14 @@ import List from './components/List';
 const UserPage = () => {
 	const {id} = useParams<{id: string}>();
 	const user = useAppSelector(s => extractUserById(s, id || ''));
+	const currentUser = useAppSelector(extractCurrentUser);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (user.id === '_default') {
+		if (currentUser.id === '_default') {
 			navigate('/');
 		}
-	}, [user]);
+	}, [currentUser]);
 
 	const handleBack = () => navigate('/');
 

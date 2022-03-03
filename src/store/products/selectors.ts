@@ -57,11 +57,11 @@ export const extractFilteredGamesAsArray = createSelector(
 			filteredGames.push(...games.filter(game => game.isLeader));
 			break;
 		case 2:
-			filteredGames.push(...games.filter(game => !game.isCame));
-			break;
-		case 3:
 			filteredGames.push(...games.filter(game => game.discount));
 			break;
+		case 3:
+			filteredGames.push(...games.filter(game => !game.isCame));
+			break;			
 		}			
 
 		if (!filteredGames.length) {

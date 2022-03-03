@@ -4,7 +4,7 @@ const GAMES: IGame[] = [
 	{
 		id: '_1',
 		title: 'Forza Horizon 5',
-		genres: ['Гонки', 'Симулятор', 'Открытый мир'],
+		genres: ['Автосимулятор', 'Симулятор', 'Открытый мир'],
 		description: 'Вас ждёт бесконечный калейдоскоп приключений Horizon! Совершайте увлекательные поездки по невероятно красивому и самобытному миру Мексики за рулём величайших автомобилей в истории. Начните своё приключение Horizon уже сегодня, добавив игру в свой список желаний!',
 		fullDescription: [
 			{
@@ -296,8 +296,8 @@ const GAMES: IGame[] = [
 				Size: 45
 			}
 		],
-		isCame: false,
-		isNovice: false,
+		isCame: true,
+		isNovice: true,
 		isLeader: true,
 		date: '1 мар. 2022',
 		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
@@ -356,6 +356,244 @@ const GAMES: IGame[] = [
 		author: 'Rockstar Games',
 		publisher: 'Rockstar Games',
 		key: '6FZ91-PA8A1-1M3PO'
+	},
+	{
+		id: '_7',
+		title: 'Starfield',
+		genres: ['Экшен', 'RPG'],
+		description: 'Starfield — первая игровая вселенная, созданная за последние 25 лет Bethesda Game Studios, авторами The Elder Scrolls V: Skyrim и Fallout 4. В этой инновационной ролевой игре вам предстоит отправиться к звёздам, чтобы раскрыть величайшую тайну человечества.',
+		fullDescription: [
+			{
+				body: 'Starfield — первая игровая вселенная, созданная за последние 25 лет Bethesda Game Studios, авторами The Elder Scrolls V: Skyrim и Fallout 4. В этой инновационной ролевой игре вы сможете создать своего персонажа и исследовать космос так, как вам этого хочется. Отправляйтесь в путь и раскройте величайшую тайну человечества.'
+			}
+		],
+		price: undefined,
+		image: 'https://cdn.akamai.steamstatic.com/steam/apps/1716740/header.jpg?t=1639080161',
+		video: 'https://www.youtube.com/embed/_XNWeUlsVdY',
+		isCame: false,
+		isNovice: false,
+		isLeader: false,
+		date: '11 нояб 2022',
+		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
+		author: 'Bethesda Game Studios',
+		publisher: 'Bethesda Softworks',
+		key: '6FZ91-PA8A1-1M3PO'
+	},
+	{
+		id: '_8',
+		title: 'Dwarf Fortress',
+		genres: ['Песочница'],
+		description: 'The deepest, most intricate simulation of a world that\'s ever been created. The legendary Dwarf Fortress is now on Steam. Build a fortress and try to help your dwarves survive, OR adventure as a single hero against a deeply generated world.',
+		fullDescription: [
+			{body: 'Prepare for the deepest, most intricate simulation of a world that has ever been created.'},
+			{
+				header: 'Features',
+				body: `Not just generated geometry -- a whole simulated world. Generated rise and fall of civilizations, personalities, creatures, cultures, etc. Infinite hours of gameplay.
+				Now with graphics! (Optional ASCII mode available.)
+				Steam Workshop integration for easier modding
+				A lifetime “living” project - created/updated since 2003, with no end in sight
+				Generate your unique world and manage a bustling colony of dwarves, even as they probably mine towards their eventual demise.
+				Optional ADVENTURER MODE: explore the generated world as a single hero in an RPG
+				Optional LEGENDS MODE: read the history of the generated world and your games in it
+				A new endless hobby, just for you!`
+			},
+			{
+				header: 'About',
+				body: `The legendary Dwarf Fortress is now on Steam! Build a fortress and try to help your dwarves survive, despite threats of starvation, dragons, and madness.
+				In this complex construction/management/roguelike simulation, every generated world brings a unique challenge, whether it’s dwarves with their own simulated personalities or aquifers. Observe what makes your civilization fall into eventual decline, and learn for next time… until something else inevitably goes wrong.
+
+				The combat model includes skills, body parts, material properties, aimed attacks, wrestling, pain, nausea, various poison effects, and much more.
+
+				It’s difficult to convey the depth of the generation. Hundreds of animals and monsters, many of which are randomly created for each world, as well as generated poetry, musical forms, instruments, and dances for your dwarves to practice and perform. A dynamic weather model tracks wind, humidity, and air masses to create fronts, clouds, storms, and blizzards. Over two hundred rock and mineral types can appear, in their proper geological environments.
+
+				Your purchase includes Dwarf Fortress Classic if you prefer to play without graphics or music or Steam-specific features, in the “classic” beta branch.
+
+				Remember: Losing is fun!`
+			},
+			{
+				header: 'What\'s new',
+				body: `Nothing substantial is new or changed, under the hood. It’s still good old Dwarf Fortress, but with graphics support and music by default. A few bells and whistles won’t change that.
+
+				You may already be familiar with the tile set mod packs from Michał “Mayday” Madej and Jacob "Ironhand" Bowman. Together, their efforts are creating an all-new tileset, as seen in what we've released so far. Meanwhile, Dabu and a couple of other musical artists yet to be announced are collaborating new musical tracks to match the seasons, and possibly a few other sound effects. (We're assured the original Dwarf Fortress song will make a reappearance as well in some form, don't worry.)`
+			}
+		],
+		price: undefined,
+		image: 'https://cdn.akamai.steamstatic.com/steam/apps/975370/header.jpg?t=1643663818',
+		video: 'https://www.youtube.com/embed/pp7DEUzWOfo',
+		isCame: false,
+		isNovice: false,
+		isLeader: false,
+		date: 'Time is subjective',
+		languages: ['английский'],
+		author: 'Kitfox Games',
+		publisher: 'Kitfox Games',
+		key: '6FZ91-PA8A1-1M3PO'
+	},
+	{
+		id: '_9',
+		title: 'SnowRunner',
+		genres: ['Симулятор', 'Автосимулятор', 'Песочница'],
+		description: 'Встречайте новое поколение гонок по бездорожью! Вас ждут суровые просторы, мощные машины и десятки сложных заданий, которые можно выполнять в одиночку или в команде до 4 игроков!',
+		fullDescription: [
+			{
+				body: 'Встречайте новое поколение гонок по бездорожью!'
+			},
+			{
+				body: 'Сядьте за руль крутого внедорожника в SnowRunner и приготовьтесь покорять суровые просторы с реалистичной симуляцией ландшафта! В вашем распоряжении 40 моделей таких известных марок, как Ford, Chevrolet и Freightliner. Оставьте свой след в диком мире игры.'
+			},
+			{
+				body: 'Выполняйте сложные задания в суровых условиях. Вас ждут грязь, потоки воды, снег и застывшие озёра. Расширяйте автопарк и настраивайте свои автомобили с помощью улучшений и различных приспособлений, таких как шноркели для водных потоков или цепи для движения по снегу.'
+			},
+			{
+				body: `Играйте в одиночку или в команде до 4 игроков и расширяйте границы возможностей SnowRunner при помощи модификаций от нашего сообщества!
+				  Экстремальные гонки с реалистичной физической моделью
+				  40 уникальных машин, которые можно улучшать и настраивать по своему вкусу
+				  Десятки сложных заданий в едином игровом мире
+				  Играйте в одиночку или в команде до 4 игроков`
+			}
+		],
+		price: 1199,
+		image: 'https://cdn.akamai.steamstatic.com/steam/apps/1465360/header.jpg?t=1646144712',
+		video: 'video',
+		requirements: [
+			{
+				type: 'Минимальные',
+				OS: 'Windows 7/8/10 (64-bit)',
+				CPU: 'Intel i3-4130 3.4 GHz / AMD Ryzen 3 2200U 3.4 GHz',
+				RAM: '8 GB ОЗУ',
+				GPU: '2 GB, GeForce GTX 660 / Radeon R9 270',
+				Size: 20
+			},
+			{
+				type: 'Рекомендуемые',
+				OS: 'Windows 7/8/10 (64-bit)',
+				CPU: 'Intel i7-8700 3.2 GHz / AMD Ryzen 7 2700 3.2 GHz',
+				RAM: '16 GB ОЗУ',
+				GPU: '4 GB, GeForce GTX 970 / Radeon RX 580',
+				Size: 20
+			}
+		],
+		isCame: true,
+		isNovice: false,
+		isLeader: false,
+		date: '18 мая. 2021',
+		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
+		author: 'Saber Interactive',
+		publisher: 'Focus Home Interactive',
+		key: '6FZ91-PA8A1-1M3PO'
+	},
+	
+	{
+		id: '_10',
+		title: 'RimWorld',
+		genres: ['Песочница', 'Стратегия', 'Симулятор'],
+		description: 'RimWorld управляет тремя людьми, выжившими после крушения космического лайнера, в строительстве колонии в приграничном мире на краю изученного пространства. Источники вдохновения этой игры -это дух космического вестерна Firefly, глубокая проработка Dwarf',
+		fullDescription: [
+			{
+				body: 'Научно-фантастический симулятор колонии под управлением ИИ-рассказчика.'
+			},
+			{
+				body: 'RimWorld управляет тремя людьми, выжившими после крушения космического лайнера, в строительстве колонии в приграничном мире на краю изученного пространства. Источники вдохновения этой игры -это дух космического вестерна Firefly, глубокая проработка Dwarf Fortress и эпические Dune и Warhammer 40 000.'
+			},
+			{
+				body: 'Игра RimWorld разработана Tynan Sylvester и компанией Ludeon Studios. С момента первого выхода 4 ноября 2013 г. была улучшена.'
+			},
+			{
+				header: 'ИИ-рассказчик',
+				body: `RimWorld разработана не как состязательная стратегическая игра, а как генератор историй. Она не о победе и проигрыше, она о драме, трагедии и комедии, происходящей в вашей колонии. Игра создает такие события, как пиратские набеги, прибытие торговцев и бури. Но эти события не случайны. RimWorld использует ИИ-рассказчика (по образцу ИИ-директора из Left 4 Dead), который анализирует ситуацию и решает, какое событие по его мнению создаст лучшую историю.
+
+				Можно выбирать между тремя рассказчиками: Продуманная Кассандра Классическая, более продуманная, ориентированная на строительство Фиби Тихоня и абсолютно непредсказуемый Ренди Случай.`
+			},
+			{
+				header: 'Психология',
+				body: `Люди в RimWorld постоянно изучают ситуацию и окружение, чтобы знать, как чувствовать себя в данный момент. Они реагируют на голод и усталость, на смерти у них на глазах, на неуважительно похороненные трупы, на ранения, на темноту, на нахождение в стесненных условиях, на сон под открытым небом или в одной комнате с посторонними и на многие другие ситуации. Можно в любое время проверять психологию героя, чтобы знать, что он чувствует и почему.
+
+				Когда колонист слишком долго находится в состоянии стресса, у него может случиться "нервный срыв". Кто-то не выдерживает и некоторое время скитается по колонии. Кто-то уходит. Кто-то как в Dwarf'е становится психопатом и впадает в истерику насилия.`
+			},
+			{
+				header: 'Вселенная',
+				body: `Суть RimWorld - это смесь жесткой научной фантастики и Старого Запада. Это приграничный мир на краю изученного пространства вдали от цивилизованных основных миров. Планета огромна и в основном пустынна. Там нигде поблизости нет сильных цивилизаторских правительств. Вы предоставлены сами себе.
+
+				Основная идея вселенной RimWorld - это разнообразие условий человеческого существования. В этих условиях человечество расселяется по всей галактике при отсутствии иных способов перемещения и общения быстрее чем свет. Учитывая тот факт, что звездные цивилизации приходят к упадку (из-за войн и эпидемий) так же часто, как и к процветанию, это означает, что межзвездный путешественник может сталкиваться с людьми любого уровня развития: от доземледельческих племен до сверхъестественных полубогов-полуроботов.
+				
+				В RimWorld начинающие колонисты находятся на уровне технического развития в середине этого диапазона. Но вы можете сталкиваться с людьми гораздо более низкого и более высокого уровня развития, а также приобретать и использовать их инструменты и оружие. В RimWorld в отдельно взятом бою могут участвовать луки и стрелы, ружья, автоматические винтовки и биомеханические машины убийств.`
+			}
+		],
+		price: 619,
+		image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/294100/header.jpg?t=1643670325',
+		video: 'https://www.youtube.com/embed/3tDrxOASUog',
+		requirements: [
+			{
+				type: 'Минимальные',
+				OS: 'Windows 7',
+				CPU: 'Core 2 Duo',
+				RAM: '4 GB ОЗУ',
+				GPU: 'Intel HD Graphics 4000 or other shader model 4.0',
+				Size: 1
+			}
+		],
+		isCame: true,
+		isNovice: false,
+		isLeader: false,
+		date: '17 окт. 2018',
+		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
+		author: 'Ludeon Studios',
+		publisher: 'Ludeon Studios',
+		key: 'P91FZ-1PA3P-6M8A1O'
+	},
+	{
+		id: '_11',
+		title: 'METAL GEAR SOLID V: THE PHANTOM PAIN',
+		genres: ['Стелс', 'Экшен', 'Глубокий сюжет'],
+		description: 'Перейдите в новую эру франшизы с передовыми технологиями, работу которых обеспечивает графический процессор Fox Engine. Игроков ожидает масса положительных эмоций, поскольку теперь им будет предоставлена свобода выбора тактики в миссиях в открытом мире.',
+		fullDescription: [
+			{
+				body: 'Компания Konami Digital Entertainment выпускает последнюю главу игры «METAL GEAR SOLID V» — «METAL GEAR SOLID V: The Phantom Pain». Перейдите в новую эру франшизы с передовыми технологиями, работу которых обеспечивает графический процессор Fox Engine. Игроков ожидает масса положительных эмоций, поскольку теперь им будет предоставлена свобода выбора тактики в миссиях в открытом мире.'
+			},
+			{
+				body: 'Спустя девять лет после событий игры «MGSV: GROUND ZEROES» и падения Главной базы «Большой босс» Снейк выходит из комы. На дворе 1984 год. На фоне холодной войны продолжается глобальное обострение ядерного кризиса. Движимый местью, Снейк создает новую частную армию и возвращается на поле боя в поисках тайной группы XOF.'
+			},
+			{
+				body: 'Команда разработчиков METAL GEAR SOLID продолжает амбициозно использовать такие серьезные темы, как психология военных конфликтов и сопутствующие им зверства и преступления. «MGSV: The Phantom Pain» — одна из наиболее ожидаемых игр года, которая будет характеризоваться игровым дизайном с открытым миром, фотореалистичной графикой и богатым функционалом. Эта игра войдет в историю как один из эталонов игровой промышленности за кинематографическую сюжетную линию, глубокие темы и увлекательнейший тактический геймплей.'
+			},
+			{
+				header: 'Главные особенности:',
+				body: `- Игровой дизайн с открытым миром, в котором игроки обладают полной свободой выбора тактики миссий и игрового прогресса в целом.
+				- Графический процессор Fox Engine обеспечивает фотореалистичную графику, высочайшую детализацию игры и по-настоящему инновационное качество изображений.
+				- Онлайн-функциональность переносит игровые впечатления за пределы консоли на другие устройства, значительно расширяя внутриигровые возможности и доступ к игре.`
+			}
+		],
+		price: 999,
+		image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/287700/header.jpg?t=1591740509',
+		video: 'https://www.youtube.com/embed/NL4ZxDWLwpM',
+		requirements: [
+			{
+				type: 'Минимальные',
+				OS: 'Windows 7x64, Windows 8x64, Windows 10x64 (64-bit OS Required)',
+				CPU: 'Intel Core i5-4460 (3.40 GHz) or better; Quad-core or better',
+				RAM: '4 GB ОЗУ',
+				GPU: 'NVIDIA GeForce GTX 650 (2GB) or better (DirectX 11 card Required)',
+				Size: 28,
+				DirectX: 9
+			},
+			{
+				type: 'Рекомендуемые',
+				OS: 'Windows 7x64, Windows 8x64, Windows 10x64 (64-bit OS Required)',
+				CPU: 'Intel Core i7-4790 (3.60GHz) or better; Quad-core or better',
+				RAM: '8 GB ОЗУ',
+				GPU: 'NVIDIA GeForce GTX 760 (DirectX 11 graphic card required)',
+				Size: 28,
+				DirectX: 9
+			}
+		],
+		isCame: true,
+		isNovice: false,
+		isLeader: false,
+		date: '1 сен. 2015',
+		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
+		author: 'Konami Digital Entertainment',
+		publisher: 'Konami Digital Entertainment',
+		key: 'HASSK-LTEOF-ZXNKG'
 	}
 ];
 

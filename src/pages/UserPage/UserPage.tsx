@@ -7,13 +7,16 @@ import useAppSelector from '../../tools/hooks/useAppSelector';
 import Info from './components/Info';
 import './UserPage.css';
 import List from './components/List';
+import ReactGa from 'react-ga';
 
 const UserPage = () => {
 	const {id} = useParams<{id: string}>();
+	
 	const user = useAppSelector(s => extractUserById(s, id || ''));
 	const currentUser = useAppSelector(extractCurrentUser);
 	const navigate = useNavigate();
-
+	
+	ReactGa.pageview(`/user/${id}`);
 	useEffect(() => {
 		if (currentUser.id === '_default') {
 			navigate('/');

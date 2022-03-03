@@ -6,8 +6,11 @@ import Cards from './components/Cards';
 import Filters from './components/Filters';
 import Popular from './components/Popular';
 import './HomePage.css';
+import ReactGA from 'react-ga';
 
 const HomePage = () => {
+	ReactGA.pageview('/');
+
 	const games = useAppSelector(extractGamesAsArray);
 	const {filters} = useAppSelector(extractGamesData);
 	const filteredGames = useAppSelector(extractFilteredGamesAsArray);

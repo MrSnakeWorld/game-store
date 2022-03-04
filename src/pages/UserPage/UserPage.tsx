@@ -26,6 +26,8 @@ const UserPage = () => {
 
 	const handleBack = () => navigate('/');
 
+	const handleAvatar = (e: React.ChangeEvent<HTMLInputElement>) => addImage(e);
+
 	return (
 		<Box className="user">
 			<Center className="user__title">
@@ -48,7 +50,7 @@ const UserPage = () => {
 							</Center>
 							<Text textAlign="center" >Выберите файл</Text>
 						</label>
-						<input id="upload-avatar" type="file" accept="image/*" onChange={addImage}/>
+						<input id="upload-avatar" type="file" accept="image/*" onChange={handleAvatar}/>
 					</div>
 				</GridItem>
 				<GridItem className="user__grid-info">

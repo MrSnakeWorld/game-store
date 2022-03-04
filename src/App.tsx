@@ -1,5 +1,5 @@
 import {createBrowserHistory} from 'history';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Route, Routes} from 'react-router-dom';
 import './App.css';
 import useAuthModal from './components/AuthModal/useAuthModal';
@@ -14,8 +14,6 @@ export const history = createBrowserHistory();
 
 const App = () => {
 	const {modal, onOpen, setAuth} = useAuthModal();
-
-	useDBInit();
 
 	return (
 		<div className="app">

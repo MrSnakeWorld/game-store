@@ -3,12 +3,11 @@ import {useDispatch} from 'react-redux';
 import {editUser} from '../../../store/users/actions';
 import {extractCurrentUser} from '../../../store/users/selectors';
 import useAppSelector from '../useAppSelector';
+import useDBInit from './useDBInit';
 
 export default (): {
 	addImage: (e: React.ChangeEvent<HTMLInputElement>) => void
 } => {
-	console.log('add');
-
 	const user = useAppSelector(extractCurrentUser);
 	const dispatch = useDispatch();
 
@@ -16,6 +15,13 @@ export default (): {
 		const file = e.target.files?.[0];
 
 		const dbRequest = indexedDB.open('db', 1);
+
+		dbRequest.onupgradeneeded = () => {
+			const db = dbRequest.result;
+			if (!db.objectStoreNames.contains('userImages')) {
+				db.createObjectStore('userImages', {keyPath: 'id'});
+			}
+		};
 
 		dbRequest.onsuccess = () => {
 			const db = dbRequest.result;

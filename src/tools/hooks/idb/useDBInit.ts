@@ -7,7 +7,8 @@ export default (): void => {
 	useEffect(() => {
 		const dbRequest = indexedDB.open('db', 1);
 
-		dbRequest.onupgradeneeded = () => {
+		dbRequest.onupgradeneeded = (e) => {
+			console.log(e.oldVersion, e.newVersion);
 			const db = dbRequest.result;
 
 			if (!db.objectStoreNames.contains('userImages')) {
@@ -17,5 +18,4 @@ export default (): void => {
 		
 		loadImage();
 	}, []);
-	
 };

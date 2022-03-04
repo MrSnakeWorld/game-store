@@ -1,9 +1,7 @@
-import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {editUser} from '../../../store/users/actions';
 import {extractCurrentUser} from '../../../store/users/selectors';
 import useAppSelector from '../useAppSelector';
-import useDBInit from './useDBInit';
 
 export default (): {
 	loadImage: () => void

@@ -355,7 +355,7 @@ const GAMES: IGame[] = [
 		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
 		author: 'Rockstar Games',
 		publisher: 'Rockstar Games',
-		key: '6FZ91-PA8A1-1M3PO'
+		key: '6CV5T-MHVLN-MAUIA'
 	},
 	{
 		id: '_7',
@@ -377,7 +377,7 @@ const GAMES: IGame[] = [
 		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
 		author: 'Bethesda Game Studios',
 		publisher: 'Bethesda Softworks',
-		key: '6FZ91-PA8A1-1M3PO'
+		key: '7TBH7-2PK23-2WK5B'
 	},
 	{
 		id: '_8',
@@ -427,7 +427,7 @@ const GAMES: IGame[] = [
 		languages: ['английский'],
 		author: 'Kitfox Games',
 		publisher: 'Kitfox Games',
-		key: '6FZ91-PA8A1-1M3PO'
+		key: '5N6FR-ISAKT-MGYTA'
 	},
 	{
 		id: '_9',
@@ -480,7 +480,7 @@ const GAMES: IGame[] = [
 		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
 		author: 'Saber Interactive',
 		publisher: 'Focus Home Interactive',
-		key: '6FZ91-PA8A1-1M3PO'
+		key: 'PV0MK-VI7AG-YOPOW'
 	},
 	
 	{
@@ -539,7 +539,7 @@ const GAMES: IGame[] = [
 		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
 		author: 'Ludeon Studios',
 		publisher: 'Ludeon Studios',
-		key: 'P91FZ-1PA3P-6M8A1O'
+		key: 'M4KK4-CGPMR-33PAX'
 	},
 	{
 		id: '_11',
@@ -593,7 +593,7 @@ const GAMES: IGame[] = [
 		languages: ['русский', 'английский', 'французский', 'итальянский', 'немецкий', 'испанский'],
 		author: 'Konami Digital Entertainment',
 		publisher: 'Konami Digital Entertainment',
-		key: 'HASSK-LTEOF-ZXNKG'
+		key: 'WPVLT-AH1X5-GU0IC'
 	}
 ];
 

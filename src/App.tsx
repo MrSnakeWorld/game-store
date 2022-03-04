@@ -8,7 +8,6 @@ import GamePage from './pages/GamePage/GamePage';
 import HomePage from './pages/HomePage/HomePage';
 import UserPage from './pages/UserPage/UserPage';
 import {Sticky, StickyContainer} from 'react-sticky';
-import useDBInit from './tools/hooks/idb/useDBInit';
 
 export const history = createBrowserHistory();
 
@@ -16,27 +15,25 @@ const App = () => {
 	const {modal, onOpen, setAuth} = useAuthModal();
 
 	return (
-		<div className="app">
-			<StickyContainer>
-				<Sticky>
-					{({style}) => (
-						<div style={{...style, zIndex: 100}}>
-							<Header 
-								onOpen={onOpen}
-								setAuth={setAuth}
-							/>
-						</div>
-					)}
-				</Sticky>
+		<StickyContainer>
+			<Sticky>
+				{({style}) => (
+					<div style={{...style, zIndex: 100}}>
+						<Header 
+							onOpen={onOpen}
+							setAuth={setAuth}
+						/>
+					</div>
+				)}
+			</Sticky>
 
-				<Routes>     
-					<Route path="/game/:id" element={<GamePage />} />
-					<Route path="/" element={<HomePage />} />   
-					<Route path="/user/:id" element={<UserPage />} />
-				</Routes>
-				{modal}
-			</StickyContainer>
-		</div>
+			<Routes>     
+				<Route path="/game/:id" element={<GamePage />} />
+				<Route path="/" element={<HomePage />} />   
+				<Route path="/user/:id" element={<UserPage />} />
+			</Routes>
+			{modal}
+		</StickyContainer>
 	);
 };
 

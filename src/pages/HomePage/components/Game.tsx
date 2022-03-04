@@ -46,8 +46,12 @@ const Game = ({game}: {game: IGame}) => {
 				justifyContent="space-between"
 				borderRadius={15}
 			>
-				<Price variant="small" price={game.price} discount={game.discount} />
-				<CartButton game={game} />
+				{game.isCame && (
+					<>
+						<Price variant="small" price={game.price} discount={game.discount} />
+						<CartButton game={game} />
+					</>
+				)}
 			</Flex>
 
 		</Box>

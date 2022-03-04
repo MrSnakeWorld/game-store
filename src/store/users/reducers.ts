@@ -66,6 +66,7 @@ const usersReducer = createReducer(getInitialState(), {
 
 		currentUser.name = payload.name;
 		currentUser.email = payload.email;
+		currentUser.avatar = payload.file;
 
 		localStorage.setItem('currentUser', JSON.stringify(currentUser));
 		localStorage.setItem(currentUser.id, JSON.stringify(currentUser));

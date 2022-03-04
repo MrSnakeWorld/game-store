@@ -23,7 +23,7 @@ const UserAvatar = ({user, className}: IUserAvatarProps) => {
 	return (
 		<Box className={className} display="flex" alignItems="center">
 			<Menu closeOnBlur closeOnSelect autoSelect={false}>
-				<MenuButton as={Avatar} name={user.name} className="avatar" />
+				<MenuButton as={Avatar} src={user.avatar} name={user.name} className="avatar" />
 				<MenuList>
 					<MenuGroup title={isDesktop ? '' : user.name} fontWeight="bold" fontSize="xl" pl={3}>
 						<MenuItemOption onClick={handleUser}>Личный кабинет</MenuItemOption>

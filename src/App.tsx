@@ -8,14 +8,15 @@ import GamePage from './pages/GamePage/GamePage';
 import HomePage from './pages/HomePage/HomePage';
 import UserPage from './pages/UserPage/UserPage';
 import {Sticky, StickyContainer} from 'react-sticky';
-import ReactGa from 'react-ga';
+import useDBInit from './tools/hooks/idb/useDBInit';
 
 export const history = createBrowserHistory();
 
-ReactGa.initialize('G-ERXD6C8F3B');
-
 const App = () => {
 	const {modal, onOpen, setAuth} = useAuthModal();
+
+	useDBInit();
+
 	return (
 		<div className="app">
 			<StickyContainer>

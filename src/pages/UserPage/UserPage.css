@@ -24,11 +24,47 @@
 .user__grid {
 	grid-template-columns: 250px auto;
 	column-gap: 40px;
+	position: relative;
+
 }
 
 .user__grid-avatar {
 	height: 250px;
 	width: 250px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.user__grid-avatar__change {
+	overflow: hidden;
+	background-color: white;
+	position: relative;
+	bottom: 0px;
+	transition-property: bottom;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	height: 150px;
+	width: 250px;
+  border-radius: 0 0 250px 250px;
+}
+
+.user__grid-avatar__image:hover ~ .user__grid-avatar__change,
+.user__grid-avatar__change:hover {
+	bottom: 100px;
+}
+
+.user__grid-avatar__change-label > div > svg {
+	padding-top: 10px;
+	width: 45px;
+	height: 45px;
+}
+
+.user__grid-avatar__change-label:hover {
+	cursor: pointer;
+}
+
+#upload-avatar {
+	display: none;
 }
 
 .user__info {
@@ -73,6 +109,25 @@
 		width: 150px;
 	}
 	
+	.user__grid-avatar__change {
+		height: 100px;
+		width: 150px;
+	}
+	
+	.user__grid-avatar__image:hover ~ .user__grid-avatar__change,
+	.user__grid-avatar__change:hover {
+		bottom: 100px;
+	}
+	
+	.user__grid-avatar__change-label > div > svg {
+		width: 40px;
+		height: 40px;
+	}
+		
+	.user__grid-avatar__change-label > p {
+		font-size: 16px;
+	}
+
 	.user__info {
 		margin-top: 10px;
 	}

@@ -5,6 +5,7 @@ export interface IUser {
 	id: string;
 	name: string;
 	email: string;
+	avatar?: string;
 	pass: string;
 	games: IGame[];
 	cart: IGame[];

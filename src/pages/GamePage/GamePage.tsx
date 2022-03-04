@@ -12,14 +12,11 @@ import Requirements from './Cards/Requirements';
 import Info from './Cards/Info';
 import {ImArrowLeft2} from 'react-icons/im';
 import Game from './Cards/Game';
-import ReactGA from 'react-ga';
 
 const GamePage = () => {
 	const {id} = useParams<{id: string}>();
 	const game = useAppSelector(s => extractGameById(s, id || ''));
 	const navigate = useNavigate();
-
-	ReactGA.pageview(`/game/${id}`);
 
 	const handleBack = () => navigate('/');
 

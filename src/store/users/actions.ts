@@ -14,16 +14,18 @@ export const addUser = (user: IUser) => ({
 export interface IEditUserPayload {
 	name: string;
 	email: string;
+	file?: string;
 }
 
-export const editUser = (name: string, email: string) => ({
+export const editUser = (name: string, email: string, file?: string) => ({
 	type: types.EDIT_USER,
-	payload: {name, email}
+	payload: {name, email, file}
 });
 
 export interface ILoginUserPayload {
 	user: IUser;
 }
+
 
 export const loginUser = (user: IUser) => ({
 	type: types.LOGIN_USER,

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Avatar, Box, Center, Grid, GridItem, Heading} from '@chakra-ui/react';
+import {Avatar, Box, Text, Center, Grid, GridItem, Heading} from '@chakra-ui/react';
 import {ImArrowLeft2} from 'react-icons/im';
 import {useNavigate, useParams} from 'react-router-dom';
 import {extractCurrentUser, extractUserById} from '../../store/users/selectors';
@@ -7,16 +7,17 @@ import useAppSelector from '../../tools/hooks/useAppSelector';
 import Info from './components/Info';
 import './UserPage.css';
 import List from './components/List';
-import ReactGa from 'react-ga';
+import {BiUpload} from 'react-icons/bi';
+import useDBAdd from '../../tools/hooks/idb/useDBAdd';
 
 const UserPage = () => {
 	const {id} = useParams<{id: string}>();
-	
 	const user = useAppSelector(s => extractUserById(s, id || ''));
 	const currentUser = useAppSelector(extractCurrentUser);
 	const navigate = useNavigate();
-	
-	ReactGa.pageview(`/user/${id}`);
+
+	const {addImage} = useDBAdd();
+
 	useEffect(() => {
 		if (currentUser.id === '_default') {
 			navigate('/');
@@ -33,10 +34,25 @@ const UserPage = () => {
 			</Center>
 			<Grid className="user__grid">
 				<GridItem className="user__grid-avatar">
-					<Avatar size="full" fontSize={200} name={user.name} />
+					<Avatar 
+						className="user__grid-avatar__image"
+						size="full"
+						fontSize={200}
+						name={user.name} 
+						src={user.avatar}
+					/>
+					<div className="user__grid-avatar__change user__grid-avatar">
+						<label htmlFor="upload-avatar" className="user__grid-avatar__change-label" >
+							<Center>
+								<BiUpload className="user__grid-avatar__change-icon"/>
+							</Center>
+							<Text textAlign="center" >Выберите файл</Text>
+						</label>
+						<input id="upload-avatar" type="file" accept="image/*" onChange={addImage}/>
+					</div>
 				</GridItem>
 				<GridItem className="user__grid-info">
-					<Info user={user}/>
+					<Info user={user} />
 				</GridItem>
 			</Grid>
 			<Box className="user__list-container">

@@ -18,7 +18,8 @@ module.exports = {
 	},
 	'plugins': [
 		'react',
-		'@typescript-eslint'
+		'@typescript-eslint',
+		'react-hooks'
 	],
 	'rules': {
 		'indent': [
@@ -32,6 +33,8 @@ module.exports = {
 		'semi': [
 			'error',
 			'always'
-		]
+		],
+		'react-hooks/rules-of-hooks': 'error', // Проверяем правила хуков
+		'react-hooks/exhaustive-deps': 'warn' // Проверяем зависимости эффекта
 	}
 };

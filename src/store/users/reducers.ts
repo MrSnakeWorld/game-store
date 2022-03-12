@@ -49,6 +49,11 @@ export const getInitialState = (): IUsersState => {
 	};
 };
 
+const changeLocalStorage = (user: IUser, userId: string) => {
+	localStorage.setItem('currentUser', JSON.stringify(user));
+	localStorage.setItem(userId, JSON.stringify(user));
+};
+
 const usersReducer = createReducer(getInitialState(), {
 	[types.ADD_USER]: (state, {payload}: {payload: IAddUserPayload}) => {
 		const id = payload.user.id;
@@ -57,8 +62,7 @@ const usersReducer = createReducer(getInitialState(), {
 			state.byId[id] = payload.user;
 			state.currentUser = id;
 
-			localStorage.setItem(id, JSON.stringify(payload.user));
-			localStorage.setItem('currentUser', JSON.stringify(payload.user));
+			changeLocalStorage(payload.user, id);
 		}
 	},
 	[types.EDIT_USER]: (state, {payload}: {payload: IEditUserPayload}) => {
@@ -68,8 +72,7 @@ const usersReducer = createReducer(getInitialState(), {
 		currentUser.email = payload.email;
 		currentUser.avatar = payload.file;
 
-		localStorage.setItem('currentUser', JSON.stringify(currentUser));
-		localStorage.setItem(currentUser.id, JSON.stringify(currentUser));
+		changeLocalStorage(currentUser, currentUser.id);
 	},
 	[types.LOGIN_USER]: (state, {payload}: {payload: ILoginUserPayload}) => {
 		state.currentUser = payload.user.id;
@@ -90,8 +93,7 @@ const usersReducer = createReducer(getInitialState(), {
 			currentUser.cart = currentUser.cart.filter(game => game.id !== payload.game.id);
 		}
 
-		localStorage.setItem('currentUser', JSON.stringify(currentUser));
-		localStorage.setItem(currentUser.id, JSON.stringify(currentUser));
+		changeLocalStorage(currentUser, currentUser.id);
 	},
 	[types.BUY_GAMES]: state => {
 		const currentUser = state.byId[state.currentUser];
@@ -99,8 +101,14 @@ const usersReducer = createReducer(getInitialState(), {
 		currentUser.games.push(...currentUser.cart);
 		currentUser.cart = [];
 
-		localStorage.setItem('currentUser', JSON.stringify(currentUser));
-		localStorage.setItem(currentUser.id, JSON.stringify(currentUser));
+		changeLocalStorage(currentUser, currentUser.id);
+	},
+	[types.CLEAR_CART]: state => {
+		const currentUser = state.byId[state.currentUser];
+
+		currentUser.cart = [];
+		
+		changeLocalStorage(currentUser, currentUser.id);
 	}
 });
 

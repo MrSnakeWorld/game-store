@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Box, Center, Grid, GridItem, Heading} from '@chakra-ui/react';
 import {useNavigate, useParams} from 'react-router-dom';
 import {extractGameById} from '../../store/products/selectors';
-
 import useAppSelector from '../../tools/hooks/useAppSelector';
 import './GamePage.css';
 import Video from './Cards/Video';
@@ -13,7 +12,11 @@ import Info from './Cards/Info';
 import {ImArrowLeft2} from 'react-icons/im';
 import Game from './Cards/Game';
 
+
 const GamePage = () => {
+	useEffect(() => {
+		window.scrollTo({behavior: 'auto', top: 0});
+	}, []);
 	const {id} = useParams<{id: string}>();
 	const game = useAppSelector(s => extractGameById(s, id || ''));
 	const navigate = useNavigate();

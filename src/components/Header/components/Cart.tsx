@@ -2,16 +2,16 @@ import {Box, Flex, Heading, Popover, PopoverArrow, PopoverBody, PopoverContent, 
 import React from 'react';
 import {IoCartSharp} from 'react-icons/io5';
 import {useDispatch} from 'react-redux';
-import {buyGames} from '../../../store/users/actions';
+import {buyGames, clearCart} from '../../../store/users/actions';
 import {IUser} from '../../../tools/interfaces/IUser';
 import GameCard from '../../GameCard/GameCard';
 import {CgSmileSad} from 'react-icons/cg';
 
 const Cart = ({user}: {user: IUser}) => {
 	const dispatch = useDispatch();
-	const handleBuy = () => {
-		dispatch(buyGames());
-	};
+
+	const handleBuy = () => dispatch(buyGames());
+	const handleClear = () => dispatch(clearCart());
 
 	return (
 		<Box className="header__cart">
@@ -22,12 +22,19 @@ const Cart = ({user}: {user: IUser}) => {
 						<IoCartSharp className="header__cart-icon"/>
 					</Flex>
 				</PopoverTrigger>
-				<PopoverContent minW="50vw">
+				<PopoverContent className="header__cart-content">
 					<PopoverArrow />
 					<PopoverHeader>
-						<Heading size="lg">Корзина</Heading>
+						<Flex className="header__cart-header">
+							<Heading size="lg">Корзина</Heading>
+							{!!user.cart.length && (
+								<Button bgColor="#9ACD32" onClick={handleClear} color="white">
+									Очистить
+								</Button>
+							)}
+						</Flex>
 					</PopoverHeader>
-					<PopoverBody>
+					<PopoverBody overflowY="scroll" overflowX="hidden">
 						{user.cart.map(game => (
 							<GameCard key={game.id} game={game}/>
 						))}

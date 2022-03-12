@@ -7,7 +7,7 @@ const Genres = ({genres}: {genres: string[]}) => (
 		<Divider/>
 		<Stack className="game__genres-stack">
 			{genres.map(genre => (
-				<Tag size="lg" colorScheme="telegram" key={genre}>
+				<Tag size="lg" colorScheme="telegram" className="game__genres-tag" key={genre}>
 					{genre}
 				</Tag>
 			))}

@@ -48,3 +48,7 @@ export const gameToCart = (game: IGame) => ({
 export const buyGames = () => ({
 	type: types.BUY_GAMES
 });
+
+export const clearCart = () => ({
+	type: types.CLEAR_CART
+});
